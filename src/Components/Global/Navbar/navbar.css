@@ -1,0 +1,198 @@
+.loginicon {
+  position: relative;
+  left: 80%;
+  width: 6%;
+  height: auto;
+  bottom: 5.5vh;
+}
+
+/* Header styles */
+header {
+  z-index: 2;
+  text-align: center;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  background: rgb(255, 255, 255);
+  position: relative;
+  padding-bottom: 3%;
+}
+header a {
+  text-decoration: none;
+}
+
+.logo {
+  color: black;
+}
+.logo img {
+  width: 8%;
+  height: auto;
+}
+.logo p {
+  display: none;
+}
+
+/* Nav styles */
+nav {
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  background: rgb(255, 255, 255);
+  width: 100vw;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+nav a {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  opacity: 0;
+  text-decoration: none;
+  transition: opacity 150ms ease-in-out;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+nav li {
+  margin: 1.2rem;
+}
+
+/* Nav toggle styles */
+.nav-toggle {
+  display: none;
+}
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* Nav toggle label styles */
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0.8rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-toggle-label span {
+  display: block;
+  background: rgb(0, 0, 0);
+  height: 1px;
+  width: 35px;
+  position: relative;
+}
+.nav-toggle-label span::before {
+  display: block;
+  background: rgb(9, 9, 9);
+  height: 1px;
+  width: 35px;
+  position: relative;
+  content: "";
+  position: absolute;
+  bottom: 7px;
+}
+.nav-toggle-label span::after {
+  display: block;
+  background: rgb(0, 0, 0);
+  height: 1px;
+  width: 35px;
+  position: relative;
+  content: "";
+  position: absolute;
+  top: 7px;
+}
+
+@media screen and (min-width: 700px) {
+  .loginicon {
+    width: 4%;
+    height: auto;
+  }
+  .logo img {
+    width: 6%;
+    height: auto;
+  }
+}
+/* Media query for screens wider than 1400px */
+@media screen and (min-width: 1100px) {
+  .loginicon {
+    position: relative;
+    left: 110%;
+    top: 80%;
+    width: 3%;
+    height: auto;
+  }
+  /* Logo styles */
+  .logo {
+    position: relative;
+    right: 40%;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 2vh;
+    height: auto;
+    width: auto;
+    left: 3vw;
+  }
+  .logo img {
+    margin-right: 1vw;
+    width: 10%;
+    height: auto;
+  }
+  .logo a {
+    font-size: 1em;
+    color: #FFFFFF;
+  }
+  .logo p {
+    display: block;
+  }
+  /* Hide the nav toggle label and checkbox */
+  .nav-toggle-label {
+    display: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  /* Adjust header and nav layout */
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  /* Position logo in the grid */
+  /* Position the nav in the grid and remove border on last child */
+  nav {
+    position: relative;
+    all: unset;
+    /* Position the ul element */
+  }
+  nav a {
+    opacity: 1;
+    font-size: 1vw;
+  }
+  nav li {
+    position: relative;
+    top: 1.5vw;
+    right: 50%;
+    padding-right: 30px;
+  }
+  nav li:last-child {
+    border-right: none;
+  }
+  nav ul {
+    position: absolute;
+    right: 10%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,79 @@
+.pageContainer {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+  justify-content: center;
+}
+.pageContainer .logintext {
+  display: none;
+}
+.pageContainer .loginContainer {
+  max-width: 80%;
+  border-radius: 10px;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.pageContainer .loginContainer h2 {
+  margin-left: 10%;
+}
+.pageContainer .loginContainer form {
+  text-align: center;
+}
+.pageContainer .loginContainer form input[type=text], .pageContainer .loginContainer form select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.pageContainer .loginContainer form input[type=password], .pageContainer .loginContainer form select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.pageContainer .loginContainer form button {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  cursor: pointer;
+  padding: 2%;
+  width: 150px;
+  font-size: 1em;
+  text-align: center;
+  background-color: #114D46;
+  border: 2px solid #114D46;
+  border-radius: 5px;
+  color: white;
+  margin-right: 5%;
+  margin-left: 5%;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1100px) {
+  .pageContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .pageContainer .logintext {
+    display: block;
+    grid-area: 1/1/2/2;
+  }
+  .pageContainer figure img {
+    width: 25px;
+  }
+  .loginContainer {
+    grid-area: 1/2/2/3;
+  }
+}
